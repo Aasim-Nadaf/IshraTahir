@@ -1,40 +1,46 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Figtree } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
-const figtree = Figtree({ subsets: ["latin"], variable: "--font-sans" });
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Ishra Tahir",
-  description: "Next.js web application with Tailwind CSS and Shadcn UI components.",
+  title: "IshraTahir Mattresses — Rest Designed Like Your Best Work",
+  description: "IshraTahir Mattresses — Rest Designed Like Your Best Work",
+  openGraph: {
+    title: "IshraTahir Mattresses — Rest Designed Like Your Best Work",
+    description: "IshraTahir Mattresses — Rest Designed Like Your Best Work",
+  },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html
       lang="en"
       className={cn(
         "h-full",
+        "scroll-smooth",
         "antialiased",
-        geistSans.variable,
-        geistMono.variable,
-        "font-sans",
-        figtree.variable,
+        inter.variable,
+        jetbrainsMono.variable,
+        "font-sans"
       )}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-[#F6F5F2] text-black font-sans antialiased selection:bg-block-lime">
         <TooltipProvider>{children}</TooltipProvider>
       </body>
     </html>

@@ -8,8 +8,16 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-mono);
   --font-heading: var(--font-sans);
+  --color-block-cream: #FFFCE1;
+  --color-block-mint: #CEF2E2;
+  --color-block-coral: #FF8B77;
+  --color-block-lime: #D4FF59;
+  --color-block-lilac: #D2B4FE;
+  --color-block-pink: #FFB5CD;
+  --color-block-navy: #1E1E2F;
+  --color-accent-magenta: #FF2E74;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -127,4 +135,30 @@
   html {
     @apply font-sans;
   }
+}
+
+.shadow-figma-card {
+  box-shadow: 0 2px 0 0 #000000;
+}
+.shadow-figma-pop {
+  box-shadow: 4px 4px 0 0 #000000;
+}
+.shadow-figma-pop-lg {
+  box-shadow: 8px 8px 0 0 #000000;
+}
+.tracking-tightest {
+  letter-spacing: -0.035em;
+}
+.tracking-tighter {
+  letter-spacing: -0.025em;
+}
+.tracking-widest-pill {
+  letter-spacing: 0.12em;
+}
+::selection {
+  background-color: #D4FF59;
+  color: #000000;
+}
+.cursor-arrow {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
 }
